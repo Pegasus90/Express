@@ -1,0 +1,21 @@
+{
+  "name": "expresscheck",
+  "version": "1.0.0",
+  "description": "expresscheckpoint",
+  "main": "index.js",
+  "scripts": {
+    "test": "expchk",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "expchk"
+  ],
+  "author": "Mehdi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
