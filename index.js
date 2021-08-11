@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
 const port = 4000;
-var d = new Date();
-var hours = d.getHours();
-const checkTime = () => (d < 6 && (hours > 17 || hours < 8) ? false : true);
+let d = new Date();
+let hours = d.getHours();
+let checkTime = () => (d < 6 && (hours > 17 || hours < 8) ? false : true);
 
 //Working time
 
