@@ -3,12 +3,12 @@ const app = express();
 const port = 4000;
 let d = new Date();
 let hours = d.getHours();
-let checkTime = () => (d < 6 && (hours > 17 || hours < 8) ? false : true);
+let day = d.getDay();
+let checkTime = () => day <= 2 && day >= 1 && hours <= 17 && hours >= 8 ? true : false;
 
 //Working time
-
 app.use(function (req, res, next) {
-  checkTime ? next() : res.sendFile(__dirname + "/public/worktime.html");
+  checkTime() ? next() : res.sendFile(__dirname + "/public/worktime.html");
 });
 
 
