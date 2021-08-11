@@ -7,11 +7,10 @@ const checkTime = () => (d < 6 && (hours > 17 || hours < 8) ? false : true);
 
 //Working time
 
-app.use(
-  (isOpen = (req, res, next) => {
-    checkTime ? next() : res.sendFile(__dirname + "/public/worktime.html");
-  })
-);
+app.use(function (req, res, next) {
+  checkTime ? next() : res.sendFile(__dirname + "/public/worktime.html");
+});
+
 
 //Routes
 
